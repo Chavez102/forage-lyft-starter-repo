@@ -34,7 +34,7 @@ class TestTires(unittest.TestCase):
 
     def test_Octoprimetires_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year )
+        last_service_date = today.replace(year=today.year)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -51,8 +51,6 @@ class TestTires(unittest.TestCase):
         tires = [0.0, 1, 1, .3]
         car = CarFactory.create_thovex(today, last_service_date, current_mileage, last_service_mileage, tires)
         self.assertFalse(car.needs_service())
-
-
 
 
 if __name__ == '__main__':
